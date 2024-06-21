@@ -91,7 +91,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 
 
 /*contact*/
-#contact{background-color: #f5f5f5;}
+contact.html{background-color: #f5f5f5;}
 .contactform textarea,.contactform input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
 /*contact*/
 
@@ -156,4 +156,40 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	.grid.team div{margin: 0;padding: 0;}
 	figure.effect-chico figcaption {padding: 1.5em;}
 	.footer{margin-top: 2em;padding-bottom: 2em;}
+}
+
+.hover-opacity::before {
+    content: ""; /* Required for ::before to work. Adjust as needed. */
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    /* Add other styling here necessary for your ::before content */
+}
+
+
+/* Make .hover-opacity invisible by default */
+.hover-opacity, .hover-opacity::before {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+/* Assuming .hover-opacity is a sibling that follows figure.effect-oscar figcaption */
+figure.effect-oscar:hover .hover-opacity, 
+figure.effect-oscar:hover .hover-opacity::before,
+figure.effect-oscar:hover .hover-opacity, 
+figure.effect-oscar:hover .hover-opacity::before {
+    opacity: 1;
+	-webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+@media (min-width: 769px) {
+	.navbar-logo {
+		float: left;
+		height: 50px;
+		padding: 15px 15px;
+		font-size: 18px;
+		line-height: 20px;
+	}
 }
